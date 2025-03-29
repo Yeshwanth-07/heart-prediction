@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Diagnosis System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Health Diagnosis</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to the Health Diagnosis System</h1>
+        <p class="lead">Choose one of the health categories below to begin your diagnosis.</p>
+    </div>
+
+    <!-- Button Section -->
+    <div class="container">
+        <div class="row text-center">
+            <!-- Heart Button -->
+            <div class="col-md-4">
+                <div class="card">
+                    <i class="fas fa-heart fa-3x text-danger mt-4"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Heart Diagnosis</h5>
+                        <p class="card-text">Get insights on heart health.</p>
+                        <button class="btn btn-danger navigate-btn" data-page="go-to-page/heart/templates/index.html">Go</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Kidney Button -->
+            <div class="col-md-4">
+                <div class="card">
+                    <i class="fas fa-clinic-medical fa-3x text-primary mt-4"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Kidney Diagnosis</h5>
+                        <p class="card-text">Check your kidney functionality.</p>
+                        <button class="btn btn-primary navigate-btn" data-page="kidney.html">Go</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Diabetes Button -->
+            <div class="col-md-4">
+                <div class="card">
+                    <i class="fas fa-syringe fa-3x text-success mt-4"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Diabetes Diagnosis</h5>
+                        <p class="card-text">Monitor your diabetes condition.</p>
+                        <button class="btn btn-success navigate-btn" data-page="diabetes.html">Go</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-light text-center">
+        <p>&copy; 2025 Health Diagnosis System. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        // jQuery to handle button navigation
+        $(document).ready(function () {
+            $(".navigate-btn").click(function () {
+                const page = $(this).data("page");
+                window.location.href = page;
+            });
+        });
+    </script>
+</body>
+</html>
